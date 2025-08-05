@@ -1,10 +1,10 @@
 # Scoop: Mitigation of Recapture Attacks on Provenance-Based Media Authentication
 
 :paperclip: [Scoop Paper]() <br/>
-:camera: [Scoop iOS Camera]() <br/>
-:camera: [Scoop Android Camera]() <br/>
-:computer: [Scoop Viewer]() <br/>
-:floppy_disk: [Scoop Dataset]()
+:camera: [Scoop iOS Camera](https://github.com/trusslab/scoop_camera_ios) <br/>
+:camera: [Scoop Android Camera](https://github.com/trusslab/scoop_camera_android) <br/>
+:computer: [Scoop Viewer](https://github.com/trusslab/scoop) <br/>
+:floppy_disk: [Scoop Dataset](https://doi.org/10.5281/zenodo.15611905)
 
 ## Overview
 
