@@ -21,6 +21,17 @@ endif()
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(Analyzer ${OpenCV_LIBS})
 
+# Check if JsonCpp target does not exist and then create it manually (Uncomment if needed)
+# if(NOT TARGET JsonCpp::JsonCpp)
+#   find_library(JSONCPP_LIBRARY NAMES jsoncpp PATHS /opt/homebrew/Cellar/jsoncpp/1.9.5/lib /usr/local/lib)
+#   find_path(JSONCPP_INCLUDE_DIR NAMES json/json.h PATHS /opt/homebrew/Cellar/jsoncpp/1.9.5/include /usr/local/include)
+
+#   add_library(JsonCpp::JsonCpp SHARED IMPORTED)
+#   set_target_properties(JsonCpp::JsonCpp PROPERTIES
+#     IMPORTED_LOCATION "${JSONCPP_LIBRARY}"
+#     INTERFACE_INCLUDE_DIRECTORIES "${JSONCPP_INCLUDE_DIR}")
+# endif()
+
 set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost REQUIRED COMPONENTS filesystem)

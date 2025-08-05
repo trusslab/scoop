@@ -47,15 +47,15 @@ if [ "$1" = "install" ]; then
     # Check the system package manager and install necessary packages (Debian-based, Arch-based, Fedora-based, MacOS)
     if command -v apt >/dev/null; then
         sudo apt update
-        sudo apt install -y build-essential cmake git libboost-all-dev libeigen3-dev libtbb-dev libpng-dev libjpeg-dev libtiff-dev $UBUNTU_VTK_PKG $UBUNTU_QT5_PKGS libqhull-dev
+        sudo apt install -y build-essential cmake git libboost-all-dev libeigen3-dev libtbb-dev libpng-dev libjpeg-dev libtiff-dev $UBUNTU_VTK_PKG $UBUNTU_QT5_PKGS libqhull-dev libtiff-dev
     elif command -v pacman >/dev/null; then
         sudo pacman -Syu --noconfirm base-devel cmake git boost eigen tbb libpng libjpeg-turbo libtiff vtk qt5-base gambas3-gb-qt5-opengl qhull
     elif command -v dnf >/dev/null; then
         sudo dnf groupinstall -y "Development Tools"
-        sudo dnf install -y cmake git boost-devel eigen3-devel tbb-devel libpng-devel libjpeg-turbo-devel libtiff-devel vtk-devel qt5-qtbase-devel qhull-devel
+        sudo dnf install -y cmake git boost-devel eigen3-devel tbb-devel libpng-devel libjpeg-turbo-devel libtiff-devel vtk-devel qt5-qtbase-devel qhull-devel libtiff-devel
     elif command -v brew >/dev/null; then
         brew update
-        brew install cmake git boost eigen tbb libpng libjpeg-turbo libtiff vtk qt@5 qhull
+        brew install cmake git boost eigen tbb libpng libjpeg-turbo libtiff vtk qt@5 qhull flann libomp
     else
         echo "Unsupported package manager. Please install the required dependencies manually."
         exit 1

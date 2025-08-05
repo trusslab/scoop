@@ -26,7 +26,7 @@ A virtual environment is recommended to avoid conflicts with other projects.
 You can run the following command to set up the environment:
 
 ```bash
-bash scripts/install_required_libraries.sh
+bash scripts/install_required_libraries.sh  {install|uninstall}
 ```
 
 This has been tested on Ubuntu 24.04 LTS, but it should work on other Linux distributions (e.g., Fedora, Arch Linux) and MacOS (with Homebrew) as well.
@@ -47,6 +47,8 @@ cmake .
 make -j$(nproc)
 ```
 This will create an executable file named `Analyzer` in the project root directory.
+Note that you might need to modify the `CMakeLists.txt` file to point to the correct paths of the required libraries if you have installed them in a non-standard location. 
+Additionally, you may need to modify the `CMakeLists.txt` file for different operating systems (e.g., Windows, MacOS) to ensure compatibility.
 
 ### Analyzer Configuration
 The analyzer can be configured before compilation by modifying the `CompilationFlags.hpp` file in the `include` directory.
